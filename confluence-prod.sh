@@ -40,7 +40,7 @@ sudo rsync -av --exclude=backups $conf_install $conf_install_backup
 #Start Confluence service
 sudo /opt/atlassian/confluence/bin/start-confluence.sh
 
-#Copy data from PROD to DEV/STAGING. Enter in your own environment values here. Setup an SSL key to do this, so no password is needed.
+#Copy data from PROD to DEV/STAGING. Enter in your own environment values here. Make sure the folders already exist on your staging/dev server. Setup an SSL key to do this, so no password is needed.
 sudo rsync -av $conf_home_backup user@confluence-dev.pawsch.net:/opt/confluence_tasks/UPDATE/conf_home/
 sudo rsync -av $conf_install_backup user@confluence-dev.pawsch.net:/opt/confluence_tasks/UPDATE/conf_install/
 sudo rsync -av $conf_sql_backup user@confluence-dev.pawsch.net:/opt/confluence_tasks/UPDATE/conf_sql/
