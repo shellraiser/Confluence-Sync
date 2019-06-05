@@ -39,7 +39,7 @@ sudo find /opt/confluence-sync/UPDATE/conf_sql/ -type d -ctime +1 -exec rm -rf {
 #This configures the site URL and title. You can configure mysql to not ask for pw in a script---just google it.
 #You will need to add lines to edit the database to input the dev licenses so it's not using any 
 #prod licenses. I also suggest you edit the database to alter the color scheme for your dev/staging server so it's easy 
-#to identify that you are looking at a non-production documentation site.
+#to identify that you are looking at a non-production Confluence site.
 
 
 #Change the base URL and Site Title (replace URL and Title values to match your own environment):
