@@ -17,11 +17,11 @@ For example, this is what my crontab looks like for prod:
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
-0 1 * * * /opt/confluence_tasks/confluence-prod.sh >> /opt/confluence-sync/LOG/confluence_tasks.log 2>&1
+0 1 * * * /opt/confluence_tasks/confluence-prod.sh >> /opt/confluence-sync/LOG/confluence_sync.log 2>&1
 
 
 And this is what I run on the staging/dev server:
 SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
-0 4 * * * /opt/confluence_tasks/confluence-staging.sh >> /opt/confluence-sync/LOG/confluence_tasks.log 2>&1
+0 4 * * * /opt/confluence_tasks/confluence-staging.sh >> /opt/confluence-sync/LOG/confluence_sync.log 2>&1
