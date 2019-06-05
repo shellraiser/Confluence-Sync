@@ -14,6 +14,7 @@ These two scripts are placed on corresponding prod and dev/staging servers. The 
 Run jobs via cronjob. Make sure the prod finishes before you have the dev/staging set to run
 
 For example, this is what my crontab looks like for prod:
+
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
@@ -21,6 +22,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/us
 
 
 And this is what I run on the staging/dev server:
+
 SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
