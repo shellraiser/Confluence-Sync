@@ -1,5 +1,5 @@
 # Confluence-Sync
-Two scripts--one for prod and one for dev/staging.
+Two scripts--one for prod and one for dev/staging. Keeps dev/staging up-to-date with prod.
 
 ## Dependencies
 
