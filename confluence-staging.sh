@@ -57,5 +57,5 @@ sudo /opt/atlassian/confluence/bin/start-confluence.sh
 #Wait for site to come up before reindexing
 sleep 2m
 
-#Reindex. Enter in the admin username and password below
+#Reindex. Enter in the Confluence site admin username and password below
 curl -u username:'password' -X POST -H "X-Atlassian-Token: nocheck" http://localhost:8899/rest/prototype/1/index/reindex
