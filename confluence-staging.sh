@@ -30,10 +30,10 @@ sudo chown -R confluence:confluence $conf_home
 #Perform mySQL upload from dump
 mysql confluence < $conf_sql_update/confluence.sql
 
-#Delete older directories
-sudo find /opt/confluence-sync/UPDATE/conf_install/ -type d -ctime +1 -exec rm -rf {} \;
-sudo find /opt/confluence-sync/UPDATE/conf_home/ -type d -ctime +1 -exec rm -rf {} \;
-sudo find /opt/confluence-sync/UPDATE/conf_sql/ -type d -ctime +1 -exec rm -rf {} \;
+#Delete update directories
+sudo rm -rf $conf_install_update
+sudo rm -rf $conf_home_update
+sudo rm -rf $conf_sql_update
 
 ###
 #This configures the site URL and title. You can configure mysql to not ask for pw in a script---just google it.
