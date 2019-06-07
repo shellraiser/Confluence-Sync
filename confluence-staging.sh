@@ -6,9 +6,9 @@ sudo truncate -s 0 /opt/confluence-sync/LOG/confluence-sync.log
 #Parameters for directories
 conf_install=/opt/atlassian
 conf_home=/var/atlassian/application-data
-conf_install_update=$(ls -td /opt/confluence-sync/UPDATE/conf_install/*/ | head -1)
-conf_home_update=$(ls -td /opt/confluence-sync/UPDATE/conf_home/*/ | head -1)
-conf_sql_update=$(ls -td /opt/confluence-sync/UPDATE/conf_sql/*/ | head -1)
+conf_install_update=$(ls -td /opt/confluence-sync/UPDATE/conf_install/* | head -1)
+conf_home_update=$(ls -td /opt/confluence-sync/UPDATE/conf_home/* | head -1)
+conf_sql_update=$(ls -td /opt/confluence-sync/UPDATE/conf_sql/* | head -1)
 
 #Stop Confluence service
 sudo /opt/atlassian/confluence/bin/stop-confluence.sh
