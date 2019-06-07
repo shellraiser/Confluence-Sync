@@ -3,7 +3,7 @@ Two scripts--one for prod and one for dev/staging. Keeps dev/staging up-to-date 
 
 ## Dependencies
 
-Do not run under root account. Script assumes you have already setup an ssh key to the staging from prod and have configured your server to not ask for mysql password
+Do not run under root account. Script assumes you have already setup an ssh key to the staging from prod and have configured your server to not ask for mysql password. All folders on staging/dev should be created before you run the script for the first time.
 
 ## Description
 
