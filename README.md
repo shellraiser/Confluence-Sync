@@ -3,7 +3,7 @@ Two scripts--one for prod and one for dev/staging. Keeps dev/staging up-to-date 
 
 ## Dependencies
 
-Do not run under root account.
+Do not run under root account. Script assumes you have already setup an ssh key to the staging from prod and have configured your server to not ask for mysql password
 
 ## Description
 
@@ -15,15 +15,12 @@ Run jobs via cronjob. Make sure the prod finishes before you have the dev/stagin
 
 For example, this is what my crontab looks like for prod:
 
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-
 0 1 * * * /opt/confluence-sync/confluence-prod.sh >> /opt/confluence-sync/LOG/confluence-sync.log 2>&1
 
 
 And this is what I run on the staging/dev server:
 
-SHELL=/bin/bash
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+0 2 * * * /opt/confluence-sync/confluence-staging.sh >> /opt/confluence-sync/LOG/confluence-sync.log 2>&1
 
-0 4 * * * /opt/confluence-sync/confluence-staging.sh >> /opt/confluence-sync/LOG/confluence-sync.log 2>&1
+
+The script clears the logs before every run because rsync-ing all those files and folders fills it up quickly. 
